@@ -344,13 +344,13 @@
 
     .credentials-grid{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
       margin-top: 24px;
     }
 
     .credential-card{
-      padding: 42px 32px;
+      padding: 36px 24px;
       border-radius: var(--radius-xl);
       border: 1px solid rgba(255,255,255,0.15);
       background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
@@ -367,7 +367,7 @@
 
     .credential-stat{
       font-family: "Arimo", sans-serif;
-      font-size: clamp(3.5rem, 6vw, 4.5rem);
+      font-size: clamp(2.75rem, 4.5vw, 3.5rem);
       font-weight: 800;
       color: var(--accent);
       margin-bottom: 16px;
@@ -448,6 +448,9 @@
     }
 
     /* Responsive */
+    @media (max-width: 1024px){
+      .credentials-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 768px){
       .hero{
         padding: 60px 18px;
@@ -662,7 +665,13 @@
         <div class="credential-card">
           <div class="credential-stat">900+</div>
           <div class="credential-label">Members</div>
-          <p class="credential-description">On her platform, <a href="https://bysengo.com" target="_blank" rel="noreferrer">Sengo</a>, an app she founded to reimagine fundraising and investing</p>
+          <p class="credential-description">On <a href="https://bysengo.com" target="_blank" rel="noreferrer">Sengo</a>, the platform she founded to reimagine fundraising and investing</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-stat">$100M</div>
+          <div class="credential-label">Venture Portfolio</div>
+          <p class="credential-description">Supported with Tulsa Local Ventures at the George Kaiser Family Foundation</p>
         </div>
 
         <div class="credential-card">
